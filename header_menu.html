@@ -1,0 +1,84 @@
+<style>
+    /* Styles specifically for the fetched header component */
+    .dropdown-container .dropdown-content {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        border: 1px solid #eeeeee;
+        min-width: 220px;
+        z-index: 100;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: none; /* Initially hidden */
+        text-align: left; /* Align text within dropdown */
+    }
+    .dropdown-container:hover .dropdown-content {
+        display: block; /* Show on hover */
+    }
+    .dropdown-container .dropdown-content li {
+        padding: 5px 20px;
+    }
+    .dropdown-container .dropdown-content a {
+        text-decoration: none;
+        color: #333333;
+        display: block;
+        white-space: nowrap; /* Prevent breaking menu links */
+    }
+    .dropdown-container .dropdown-content a:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+
+<header style="background-color: #ffffff; padding: 20px 0; border-bottom: 1px solid #eeeeee;">
+    <div class="header-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        
+        <div class="site-logo">
+            <a href="index.html"><img src="/images/upside-logo.png" alt="Upside Networks LLC Logo" style="max-height: 80px; width: auto;" /></a>
+        </div>
+        
+        <nav id="main-navigation" style="flex-grow: 1; text-align: right;">
+            <ul style="list-style: none; padding: 0; margin: 0; display: inline-block;">
+                <li style="display: inline-block; margin-left: 30px;"><a href="index.html" style="text-decoration: none; color: #333333; font-weight: 700;">Home</a></li>
+                
+                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
+                    <a href="solutions_hub.html" style="text-decoration: none; color: #333333; font-weight: 700;">Solutions &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="solutions_internet.html">Business Internet & Data</a></li>
+                        <li><a href="solutions_voip.html">Cloud Voice & UCaaS</a></li>
+                        <li><a href="solutions_sdwan.html">Network & SD-WAN</a></li>
+                        <li><a href="solutions_cybersecurity.html">Cybersecurity</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
+                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">How We Work &#9662;</a>
+                    <ul class="dropdown-content" style="min-width: 180px;">
+                        <li><a href="our_process.html">Our Process</a></li>
+                        <li><a href="why_upside.html">Why Choose UPSIDE?</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
+                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">About Us &#9662;</a>
+                    <ul class="dropdown-content" style="min-width: 200px;">
+                        <li><a href="about_us.html">Our Story & Mission</a></li>
+                        
+                        </ul>
+                </li>
+                
+                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
+                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">Resources &#9662;</a>
+                    <ul class="dropdown-content" style="min-width: 250px;">
+                        <li><a href="case_studies.html">Case Studies / Success Stories</a></li>
+                        
+                        </ul>
+                </li>
+                
+                <li style="display: inline-block; margin-left: 30px;"><a href="contact.html" style="text-decoration: none; color: #333333; font-weight: 700;">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

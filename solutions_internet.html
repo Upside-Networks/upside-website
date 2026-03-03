@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section">
+            <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 20px;">High-Speed Business Internet & Data Services</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; text-align: center; margin-bottom: 60px;">Connectivity Sourced for Speed, Reliability, and Value</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px; text-align: center;">Don't settle for slow or unreliable internet. Upside Networks LLC sources the best data connection for your exact business needs, guaranteeing the speeds and reliability required for modern operations across all locations.</p>
+            
+            <section style="max-width: 900px; margin: 0 auto; padding-top: 40px;">
+                <h3 style="font-size: 2rem; margin-bottom: 30px; color: #007bff;"><i class="fas fa-wifi" style="margin-right: 15px;"></i>Service Types We Source:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Dedicated Fiber (Lit & Dark):</strong> Symmetrical, high-speed, and guaranteed uptime via carrier Service Level Agreements (SLAs). Ideal for data-intensive operations.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Coax / Cable Internet:</strong> Cost-effective high-speed options for small to medium businesses and as a reliable failover circuit.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Fixed Wireless (4G/5G):</strong> Fast deployment and flexible last-mile solutions, often used for redundancy or in underserved areas.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Ethernet & MPLS:</strong> Private, secure, and resilient network connections for inter-office communication.</li>
+                </ul>
+            </section>
+
+            <section style="max-width: 900px; margin: 80px auto 0 auto; padding: 40px; background: #f8f8f8; border-radius: 8px; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">The UPSIDE Connectivity Value:</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">We analyze your location, bandwidth needs, and budget across dozens of carriers to present you with the top 3 best-fit options, all while managing the installation process.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Get a Free Quote Analysis &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load: ' + url + ' (Status: ' + response.status + ')');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load: ' + url + '</p>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

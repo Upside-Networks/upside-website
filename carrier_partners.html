@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> <style>
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .partner-logo {
+            padding: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+        }
+        .partner-logo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        /* Style for text placeholders, replace with logo images if available */
+        .partner-logo {
+            font-weight: 700;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section">
+            <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 20px;">Our Ecosystem of Trusted Partners</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; text-align: center; margin-bottom: 60px;">Access to the World's Leading Telecom, Cloud, and Cybersecurity Providers</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px; text-align: center;">Upside Networks LLC maintains relationships with a diverse portfolio of best-in-class carriers and technology vendors. This neutrality ensures we always recommend the solution that is best for *your* business, not ours.</p>
+            
+            <h3 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; border-bottom: 2px solid #eeeeee; padding-bottom: 15px;">Featured Connectivity and Voice Partners</h3>
+            
+            <div class="partner-grid">
+                <div class="partner-logo">Carrier A</div>
+                <div class="partner-logo">Carrier B</div>
+                <div class="partner-logo">Carrier C</div>
+                <div class="partner-logo">Voice Platform X</div>
+                <div class="partner-logo">Voice Platform Y</div>
+                <div class="partner-logo">Fiber Provider Z</div>
+                <div class="partner-logo">Global Network P</div>
+                <div class="partner-logo">UCaaS Vendor Q</div>
+            </div>
+            
+            <h3 style="font-size: 2.5rem; text-align: center; margin: 80px 0 40px 0; border-bottom: 2px solid #eeeeee; padding-bottom: 15px;">Cybersecurity and Cloud Partners</h3>
+
+            <div class="partner-grid">
+                <div class="partner-logo">Security Vendor R</div>
+                <div class="partner-logo">SASE Provider S</div>
+                <div class="partner-logo">Managed IT T</div>
+                <div class="partner-logo">Data Center U</div>
+                <div class="partner-logo">Cloud Backup V</div>
+                <div class="partner-logo">SD-WAN W</div>
+            </div>
+
+            <section style="max-width: 900px; margin: 80px auto 0 auto; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">The Power of Choice</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Our extensive network means better coverage, better pricing, and faster installation for you.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Discuss Your Next Project &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load.</p>';
+                });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

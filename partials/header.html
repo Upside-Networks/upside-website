@@ -1,0 +1,39 @@
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Upside Networks home">
+      <img class="brand-logo" src="/assets/upside-logo.png" alt="Upside Networks LLC logo" />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="/#services">Services</a>
+      <a href="/#solutions">Solutions</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn-primary" href="tel:12132934777">Call: (213) 293-4777</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const nav = document.querySelector("#primary-nav");
+    if (!btn || !nav) return;
+
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  })();
+</script>

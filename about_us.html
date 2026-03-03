@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* About Page Specific Styling */
+        .intro-hero {
+            background-color: #f5faff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .intro-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+        .intro-hero p {
+            font-size: 1.4rem;
+            color: #007bff;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Mission and Vision Grid */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .mission-box, .vision-box {
+            padding: 30px;
+            border-left: 5px solid #007bff;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .mission-box h2, .vision-box h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        .mission-box p, .vision-box p {
+            line-height: 1.8;
+            color: #333333;
+        }
+        
+        /* Core Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .value-item {
+            padding: 30px;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+        .value-item i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .value-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Ecosystem Section Styling - NEW STRUCTURE */
+        .ecosystem-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+        .ecosystem-group h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .ecosystem-group ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ecosystem-group li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #dddddd;
+            color: #333;
+        }
+        .ecosystem-group li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Media Query for mobile adjustments */
+        @media (max-width: 768px) {
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            .ecosystem-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="intro-hero">
+            <div class="section">
+                <h1><strong>Our Story: The UPSIDE Difference</strong></h1>
+                <p>Built on the principle of unbiased advocacy, we empower businesses to navigate the complex world of enterprise technology with confidence and clarity.</p>
+            </div>
+        </section>
+
+        <div class="section">
+            <div class="mission-vision-grid">
+                <div class="mission-box">
+                    <h2>Our Mission</h2>
+                    <p>To serve as the definitive, single-source technology advisor for mid-to-large enterprises, providing vendor-agnostic sourcing, expert design, and lifecycle management that maximizes technology value and minimizes operational risk.</p>
+                </div>
+                <div class="vision-box">
+                    <h2>Our Vision</h2>
+                    <p>To be the most trusted and essential partner in digital transformation, continually adapting our services to ensure our clients always possess the optimal infrastructure required to dominate their markets.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" style="padding-top: 0;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">The Pillars of UPSIDE</h2>
+            <div class="values-grid">
+                
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Vendor Neutrality</h3>
+                    <p>Our loyalty is to our client, not a carrier. We recommend the solution that is truly best for your business needs.</p>
+                </div>
+                
+                <div class="value-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Strategic Oversight</h3>
+                    <p>We provide long-term planning, ensuring your IT investments today support your growth objectives tomorrow.</p>
+                </div>
+                
+                <div class="value-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Accelerated Deployment</h3>
+                    <p>We streamline procurement and project management, significantly reducing time-to-market for complex services.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section" style="background-color: #f8f8f8;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Our Technology Ecosystem: Unbiased Access</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">Through our Technology Services Distributor (TSD) relationships, we have direct, simplified access to the industry's most respected names across all technology categories. We source the best fit, not just the easiest sale.</p>
+            
+            <div class="ecosystem-container">
+                
+                <div class="ecosystem-group">
+                    <h3><i class="fas fa-server" style="margin-right: 10px; color: #007bff;"></i>Infrastructure & Cloud</h3>
+                    <ul>
+                        <li>Fiber, Dedicated Internet & WAN</li>
+                        <li>Software Defined Wide Area Networking (SD-WAN)</li>
+                        <li>Data Center & Co-location</li>
+                        <li>Public & Private Cloud (IaaS/PaaS)</li>
+                    </ul>
+                </div>
+                
+                <div class="ecosystem-group">
+                    <h3><i class="fas fa-phone-alt" style="margin-right: 10px; color: #007bff;"></i>Communication & Security</h3>
+                    <ul>
+                        <li>Unified Communications (UCaaS/CCaaS)</li>
+                        <li>Cybersecurity & Managed Security (MSSP)</li>
+                        <li>Mobility & Wireless Solutions</li>
+                        <li>Cloud Contact Center Solutions</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <p style="text-align: center; max-width: 800px; margin: 40px auto 0; font-size: 1rem; color: #555;">*Note: Upside Networks LLC works with over 200 global carriers and technology vendors.</p>
+        </div>
+
+        <section style="background-color: #007bff; color: white; padding: 60px 20px; text-align: center;">
+            <h2 style="color: white; font-size: 3rem; margin-bottom: 15px;"><strong>Ready to Partner with an Expert?</strong></h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; color: #ccf;">Let's build an infrastructure that supports your future goals, not limits them.</p>
+            <a href="contact.html" style="background-color: white; color: #007bff; padding: 18px 45px; border-radius: 10px; text-decoration: none; font-size: 1.3rem; font-weight: 700;">Contact Our Team &rarr;</a>
+        </section>
+        
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load.</p>';
+                });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

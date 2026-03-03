@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .policy-content h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #007bff;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 5px;
+        }
+        .policy-content h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .policy-content p, .policy-content ul {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .policy-content ul {
+            padding-left: 20px;
+        }
+        .policy-header {
+            background-color: #f5faff;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .policy-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="policy-header">
+            <div class="section">
+                <h1><strong>Refund & Cancellation Policy</strong></h1>
+                <p>Policy Effective: January 2, 2026</p>
+            </div>
+        </section>
+
+        <div class="section policy-content">
+            <h2>Services Provided by Upside Networks LLC</h2>
+            <p>Upside Networks LLC primarily operates as a technology sourcing advisor and consultant. Our standard service model does not involve direct billing for underlying carrier services or physical products; those agreements are held directly between the client and the chosen provider.</p>
+
+            <h2>Consulting Fees & Refunds</h2>
+            <p>For most clients, our service is compensated via commission from the chosen provider, meaning <strong>there are no direct advisory fees paid to Upside Networks LLC by the client.</strong></p>
+            <p>In cases where a specific consulting project or audit fee is charged directly to the client:</p>
+            <ul>
+                <li><strong>Refunds:</strong> Fees are non-refundable once the contracted work has commenced, as our value is delivered through time, analysis, and strategic sourcing efforts.</li>
+                <li><strong>Cancellation:</strong> Clients may cancel a defined consulting engagement before the statement of work (SOW) has begun for a full refund of any retainer paid.</li>
+            </ul>
+
+            <h2>Cancellation of Carrier Services</h2>
+            <p>The ability to cancel, terminate, or receive a refund for any service (Internet, VoIP, Cloud, etc.) is governed <strong>entirely by the contract and policies of the underlying carrier or provider</strong> you selected. Upside Networks LLC is not party to these contracts and cannot authorize refunds or cancellations on their behalf.</p>
+            <p>We are happy to assist clients in navigating the carrier's cancellation process, but the outcome is solely determined by the provider's contractual terms.</p>
+
+            <h2>Fee-Based Products</h2>
+            <p>If Upside Networks LLC directly sells a managed service or hardware:</p>
+            <ul>
+                <li><strong>Hardware:</strong> Refunds for hardware (e.g., routers, VoIP phones) are only permitted if the hardware is returned unused and in original packaging within 30 days of receipt, subject to a 15% restocking fee.</li>
+                <li><strong>Managed Services:</strong> Cancellation of monthly managed services requires a minimum of 30 days written notice.</li>
+            </ul>
+
+            <h2>Contact Information</h2>
+            <p>For all inquiries regarding this policy, please contact us in writing:</p>
+            <p>Upside Networks LLC, LLC<br>Email: <a href="mailto:info@upsidenetworks.net">info@upsidenetworks.net</a></p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load.</p>';
+                });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

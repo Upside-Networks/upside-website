@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> <style>
+        .case-study-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        .case-study-card {
+            border: 1px solid #eeeeee;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .case-study-content {
+            padding: 30px;
+        }
+        .case-study-content h3 {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .case-study-tags {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-bottom: 15px;
+        }
+        .case-study-results {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #cccccc;
+        }
+        .case-study-results strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section">
+            <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 20px;">Success Stories and Case Studies</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; text-align: center; margin-bottom: 60px;">Real-World Results from Our Telecom Optimization Projects</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px; text-align: center;">See how Upside Networks LLC has helped businesses similar to yours streamline their infrastructure, reduce costs, and improve reliability.</p>
+            
+            <div class="case-study-list">
+                
+                <div class="case-study-card">
+                    <div class="case-study-content">
+                        <h3>Global Logistics Firm Cuts Costs by 35%</h3>
+                        <div class="case-study-tags">#SDWAN #MultiSite #CostSavings</div>
+                        <p>A multi-national logistics company faced soaring MPLS costs and slow remote site performance. UPSIDE engineered a custom SD-WAN solution utilizing diverse connectivity types, resulting in a seamless migration.</p>
+                        <div class="case-study-results">
+                            <strong>&check; 35% reduction in monthly connectivity costs.</strong>
+                            <strong>&check; 99.999% uptime guarantee across all 12 locations.</strong>
+                        </div>
+                        <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 700; color: #007bff;">Read Full Story &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-content">
+                        <h3>Medical Clinic Group Implements HIPAA-Compliant UCaaS</h3>
+                        <div class="case-study-tags">#UCaaS #VoIP #Compliance #Healthcare</div>
+                        <p>A growing regional medical group needed a unified voice and communication platform that met strict HIPAA compliance standards. We sourced and deployed a high-security, feature-rich cloud voice solution.</p>
+                        <div class="case-study-results">
+                            <strong>&check; Seamless integration with patient scheduling software.</strong>
+                            <strong>&check; 100% compliant voice and text records retention.</strong>
+                        </div>
+                        <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 700; color: #007bff;">Read Full Story &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-content">
+                        <h3>Finance Startup Achieves Rapid Cloud Migration</h3>
+                        <div class="case-study-tags">#CloudMigration #Fiber #Cybersecurity</div>
+                        <p>A new FinTech company required extremely low latency and rock-solid security for their trading platform. We secured dedicated fiber and implemented SASE security from day one, accelerating their launch timeline.</p>
+                        <div class="case-study-results">
+                            <strong>&check; Service provisioned 4 weeks faster than initial estimate.</strong>
+                            <strong>&check; Zero security incidents in the first year of operation.</strong>
+                        </div>
+                        <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 700; color: #007bff;">Read Full Story &rarr;</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <section style="max-width: 900px; margin: 80px auto 0 auto; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Ready to be Our Next Success Story?</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Tell us about your IT challenges, and we'll show you the path to optimization.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Get a Free Consultation &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load.</p>';
+                });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

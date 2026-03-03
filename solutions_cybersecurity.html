@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/upside-logo.png">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section">
+            <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 20px;">Sourcing Managed Cybersecurity and Secure Access</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; text-align: center; margin-bottom: 60px;">Enterprise-Grade Protection Without the Internal Overhead</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px; text-align: center;">Cybersecurity is not optional. We partner with leading security providers to offer your business robust protection, specializing in solutions that secure the cloud, the network edge, and remote users.</p>
+            
+            <section style="max-width: 900px; margin: 0 auto; padding-top: 40px;">
+                <h3 style="font-size: 2rem; margin-bottom: 30px; color: #007bff;"><i class="fas fa-lock" style="margin-right: 15px;"></i>Security Services We Facilitate:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">SASE (Secure Access Service Edge):</strong> Converging network connectivity and security functions into a single cloud-delivered service, ideal for remote and hybrid teams.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Managed Firewall & Security:</strong> 24/7 security monitoring, threat detection, and response managed by experts.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Backup & Disaster Recovery (BDR):</strong> Ensuring business continuity with rapid data recovery and failover planning.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Endpoint Detection & Response (EDR):</strong> Advanced protection for laptops, desktops, and servers against modern attacks.</li>
+                </ul>
+            </section>
+            
+            <section style="max-width: 900px; margin: 80px auto 0 auto; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Assess Your Risk Profile</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Let UPSIDE evaluate your current security posture and identify the managed solutions that provide the best defense at the best price.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Schedule a Security Consultation &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load: ' + url + ' (Status: ' + response.status + ')');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load: ' + url + '</p>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('/header_menu.html', 'header-placeholder');
+            loadComponent('/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
