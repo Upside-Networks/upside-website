@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Upside Networks LLC">
+    <meta property="og:url" content="https://www.upsidenetworks.net/">
+    <meta property="og:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <meta property="og:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
+    <meta property="og:image" content="https://www.upsidenetworks.net/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <meta name="twitter:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
+    <meta name="twitter:image" content="https://www.upsidenetworks.net/images/og-image.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/img/upside-logo.png">
+    <link rel="stylesheet" href="assets/css/style.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section">
+            <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 20px;">Intelligent Network Design and SD-WAN Solutions</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; text-align: center; margin-bottom: 60px;">Simplifying Multi-Location Enterprise Connectivity</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px; text-align: center;">For businesses with multiple locations or complex networking needs, SD-WAN is essential. We find the right carrier and platform to centralize control, increase network performance, and secure your wide area network.</p>
+            
+            <section style="max-width: 900px; margin: 0 auto; padding-top: 40px;">
+                <h3 style="font-size: 2rem; margin-bottom: 30px; color: #007bff;"><i class="fas fa-layer-group" style="margin-right: 15px;"></i>SD-WAN Advantages:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Application Prioritization:</strong> Ensure critical business applications (like VoIP and CRM access) always get the bandwidth they need, minimizing latency and jitter.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Cost Reduction:</strong> Use less expensive internet services (broadband, cable) alongside dedicated lines without sacrificing reliability or performance.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Centralized Management:</strong> Simplify network control across all your distributed sites from a single dashboard, allowing for quick deployment of policies.</li>
+                    <li style="font-size: 1.1rem; margin-bottom: 15px; border-left: 3px solid #eeeeee; padding-left: 15px;"><strong style="color: #1a1a1a;">Enhanced Security:</strong> Integrate security functions directly into the network edge, often a key component of SASE (Secure Access Service Edge).</li>
+                </ul>
+            </section>
+            
+            <section style="max-width: 900px; margin: 80px auto 0 auto; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Architect Your Resilient Network</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">UPSIDE partners with leading SD-WAN vendors to custom-design a network that fits your specific topology and security requirements.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Start Your Network Assessment &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load: ' + url + ' (Status: ' + response.status + ')');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load: ' + url + '</p>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('assets/partials/header_menu.html', 'header-placeholder');
+            loadComponent('assets/partials/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

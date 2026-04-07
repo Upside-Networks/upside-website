@@ -1,274 +1,271 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Upside Networks LLC</title>
-    
-    <meta name="description" content="Upside Networks LLC provides networking, managed IT, and business connectivity solutions—designed to be secure, reliable, and scalable.">
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Upside Networks LLC">
-    <meta property="og:url" content="https://www.upsidenetworks.net/">
-    <meta property="og:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
-    <meta property="og:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
-    <meta property="og:image" content="https://www.upsidenetworks.net/images/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Upside Networks LLC — Business Connectivity, Simplified.">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
-    <meta name="twitter:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
-    <meta name="twitter:image" content="https://www.upsidenetworks.net/images/og-image.png">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="icon" href="/assets/img/upside-logo.png">
-    
-    <link rel="stylesheet" href="assets/css/style.css"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upside Networks — Vendor-Neutral Telecom Sourcing & Management</title>
+<meta name="description" content="Upside Networks sources, negotiates, and manages your business technology across 200+ carriers. Vendor-neutral. 10-30% average savings. One point of contact.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.upsidenetworks.net/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.upsidenetworks.net/">
+<meta property="og:title" content="Upside Networks — Vendor-Neutral Telecom Sourcing & Management">
+<meta property="og:description" content="Upside Networks sources, negotiates, and manages your business technology across 200+ carriers. Vendor-neutral. 10-30% average savings. One point of contact.">
+<meta property="og:image" content="https://www.upsidenetworks.net/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Upside Networks — Vendor-Neutral Telecom Sourcing & Management">
+<meta name="twitter:description" content="Upside Networks sources, negotiates, and manages your business technology across 200+ carriers. Vendor-neutral. 10-30% average savings. One point of contact.">
+<link rel="icon" href="/assets/img/upside-logo.png">
+<link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        /* =======================================================
-        Home Page Specific Styling
-        ======================================================= */
-
-        /* Hero Section */
-        .hero-section {
-            background-color: #f5faff; /* Very light blue background */
-            padding: 80px 0;
-            text-align: center;
-            border-bottom: 5px solid #007bff;
-        }
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .hero-section h1 {
-            font-size: 3.8rem;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-            color: #555555;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-        .hero-section .cta-button {
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 8px;
-        }
-
-        /* Value Proposition / Features Grid */
-        .value-prop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding-top: 50px;
-        }
-        .value-card {
-            padding: 30px;
-            border-left: 5px solid #007bff;
-            background: #ffffff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-        .value-card i {
-            font-size: 2.5rem;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-        .value-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        .value-card p {
-            color: #666;
-        }
-        
-        /* Partner Logos Section */
-        .partner-section {
-            background-color: #f8f8f8;
-            padding: 60px 0;
-            text-align: center;
-        }
-        .partner-section h2 {
-            margin-bottom: 40px;
-            font-size: 2rem;
-        }
-        .partner-logo-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .partner-logo-grid div {
-            padding: 15px 25px;
-            border: 1px solid #eeeeee;
-            border-radius: 6px;
-            font-weight: 700;
-            color: #555;
-            min-width: 150px;
-            background: white;
-        }
-
-        /* Final CTA */
-        .final-cta-section {
-            background-color: #1a1a1a; /* Dark background for contrast */
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            margin-top: 0;
-        }
-        .final-cta-section h2 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .final-cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            color: #cccccc;
-        }
-        .final-cta-section .cta-button {
-            background-color: #007bff;
-            color: white;
-            padding: 18px 45px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            transition: background-color 0.3s;
-        }
-        .final-cta-section .cta-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
-
 <body>
+<div id="header-placeholder"></div>
+<main>
 
-    <div id="header-placeholder"></div>
-
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1><strong>Telecom & IT Sourcing, Simplified.</strong></h1>
-                <p>We cut through the noise of 200+ carriers to deliver unbiased, cost-effective, and future-proof technology solutions.</p>
-                <a href="contact.html" class="cta-button">Start a Free Technology Audit &rarr;</a>
-            </div>
-        </section>
-
-        <div class="section">
-            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 50px;">Your Strategic Partner for Digital Infrastructure</h2>
-            
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <i class="fas fa-satellite-dish"></i>
-                    <h3>Connectivity & Data</h3>
-                    <p>Optimizing multi-site networks, fiber, co-location, and enterprise-grade internet to ensure unparalleled speed and uptime.</p>
-                    <a href="solutions_internet.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-phone-volume"></i>
-                    <h3>Cloud Voice & UCaaS</h3>
-                    <p>Implementing reliable, scalable, and fully managed Unified Communications (UCaaS) platforms for seamless team and customer interaction.</p>
-                    <a href="solutions_voip.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Cybersecurity Solutions</h3>
-                    <p>Protecting your assets with modern security stacks, including SASE, managed firewalls, and compliance-focused defense strategies.</p>
-                    <a href="solutions_cybersecurity.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Unbiased Procurement</h3>
-                    <p>We work for *you*, using our TSD expertise to source, vet, and negotiate the best prices and SLAs from any provider in the market.</p>
-                    <a href="our_process.html" class="learn-more">Our Process &rarr;</a>
-                </div>
-            </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow"><span>Vendor-Neutral</span>&nbsp;Telecom Sourcing &amp; Management</div>
+        <h1>Smarter Telecom.<br><em>Without the Complexity.</em></h1>
+        <p class="subtitle">Upside Networks sources, negotiates, and manages your business technology across 200+ carriers — so you get the best solution at the lowest cost, with one point of contact for everything.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">Start a Free Technology Audit</a>
+          <a href="our_process.html" class="btn btn-outline btn-lg">How It Works</a>
         </div>
-
-        <div class="section" style="padding-top: 0;">
-            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 50px;">Why Businesses Choose UPSIDE</h2>
-            <div class="value-prop-grid">
-                
-                <div class="value-card">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Guaranteed Savings</h3>
-                    <p>Our audit often results in a 10-30% reduction in monthly telecom expenses without sacrificing service quality.</p>
-                </div>
-                
-                <div class="value-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Vendor Management Offloaded</h3>
-                    <p>We act as your single point of contact for all carriers, managing escalations, provisioning, and billing complexity.</p>
-                </div>
-
-                <div class="value-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Future-Proof Strategy</h3>
-                    <p>We ensure your infrastructure is scalable, compliant, and positioned to take advantage of emerging technologies.</p>
-                </div>
-
-            </div>
+        <div class="hero-social-proof">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z" fill="#00c9a7"/></svg>
+          <strong style="color:var(--text)">200+</strong>&nbsp;carrier partners &nbsp;&middot;&nbsp; <strong style="color:var(--text)">10&ndash;30%</strong>&nbsp;avg. savings &nbsp;&middot;&nbsp; Single point of contact
         </div>
-        
-        <section class="partner-section">
-            <h2 style="color: #1a1a1a;">Trusted Access to Over 200 Global Carriers</h2>
-            <div class="partner-logo-grid">
-                <div>Verizon</div>
-                <div>AT&T</div>
-                <div>Comcast Business</div>
-                <div>RingCentral</div>
-                <div>Microsoft Teams</div>
-                <div>Cisco</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-badge hero-badge-tl"><div class="dot"></div>Live comparison active</div>
+        <div class="ui-window">
+          <div class="ui-titlebar">
+            <div class="ui-dot red"></div><div class="ui-dot yellow"></div><div class="ui-dot green"></div>
+            <span class="ui-titlebar-text">Upside Networks &mdash; Carrier Comparison</span>
+          </div>
+          <div class="ui-body">
+            <div class="ui-heading">Recommended options for your site</div>
+            <div class="ui-carrier-row selected">
+              <span class="ui-carrier-name">Comcast Business</span>
+              <span class="ui-carrier-price">$289/mo</span>
+              <span class="ui-carrier-save">Save 28%</span>
             </div>
-        </section>
-
-        <div class="final-cta-section">
-            <h2><strong>Ready to Optimize Your Technology Spend?</strong></h2>
-            <p>Speak with one of our expert technology architects for a customized solution design.</p>
-            <a href="contact.html" class="cta-button">Schedule Your Free Consultation &rarr;</a>
+            <div class="ui-carrier-row">
+              <span class="ui-carrier-name">AT&amp;T Business Fiber</span>
+              <span class="ui-carrier-price">$349/mo</span>
+              <span class="ui-carrier-badge">Current</span>
+            </div>
+            <div class="ui-carrier-row">
+              <span class="ui-carrier-name">Lumen Technologies</span>
+              <span class="ui-carrier-price">$312/mo</span>
+            </div>
+            <div class="ui-carrier-row">
+              <span class="ui-carrier-name">Spectrum Enterprise</span>
+              <span class="ui-carrier-price">$295/mo</span>
+            </div>
+            <div class="ui-stat-row">
+              <div class="ui-stat"><span class="ui-stat-num">200+</span><span class="ui-stat-label">Carriers</span></div>
+              <div class="ui-stat"><span class="ui-stat-num">28%</span><span class="ui-stat-label">Avg Savings</span></div>
+              <div class="ui-stat"><span class="ui-stat-num">1</span><span class="ui-stat-label">Point of Contact</span></div>
+            </div>
+          </div>
         </div>
-    </main>
+        <div class="hero-badge hero-badge-br"><div class="dot"></div>Audit complete &mdash; 3 options found</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div id="footer-placeholder"></div>
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><span class="stat-num">200<em>+</em></span><span class="stat-label">Carrier &amp; technology partners</span></div>
+      <div class="stat-item"><span class="stat-num">10<em>–30%</em></span><span class="stat-label">Average telecom cost reduction</span></div>
+      <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">Point of contact for all vendors</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">Carrier bias or commission conflicts</span></div>
+    </div>
+  </div>
+</div>
 
-    <script>
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById(targetId).innerHTML = html;
-                })
-                .catch(err => {
-                    console.error(err);
-                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load.</p>';
-                });
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('assets/partials/header_menu.html', 'header-placeholder');
-            loadComponent('assets/partials/footer_menu.html', 'footer-placeholder');
-        });
-    </script>
+<!-- LOGOS -->
+<div class="logos-bar">
+  <div class="container">
+    <div class="logos-label">Trusted access to 200+ providers including</div>
+    <div class="logos-grid">
+      <div class="logo-pill">Verizon</div>
+      <div class="logo-pill">AT&amp;T</div>
+      <div class="logo-pill">Comcast Business</div>
+      <div class="logo-pill">RingCentral</div>
+      <div class="logo-pill">Cisco</div>
+      <div class="logo-pill">Microsoft Teams</div>
+      <div class="logo-pill">Lumen</div>
+      <div class="logo-pill">Spectrum Enterprise</div>
+    </div>
+  </div>
+</div>
 
+<!-- SERVICES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">What We Source</div>
+      <h2>Every technology your business runs on, optimized.</h2>
+      <p>We provide vendor-neutral sourcing across connectivity, communications, networking, and security — tailored to your exact requirements.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#128225;</div>
+        <h3>Business Internet &amp; Data</h3>
+        <p>Dedicated fiber, fixed wireless, coax, and multi-site connectivity sourced from the carriers with the best coverage and pricing at your locations.</p>
+        <a href="solutions_internet.html" class="learn-more">Explore connectivity</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128222;</div>
+        <h3>Cloud Voice &amp; UCaaS</h3>
+        <p>Modern unified communications replacing legacy PBX systems — voice, video, chat, and contact center from RingCentral, Microsoft Teams, and more.</p>
+        <a href="solutions_voip.html" class="learn-more">Explore cloud voice</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128257;</div>
+        <h3>Network &amp; SD-WAN</h3>
+        <p>Intelligent multi-site networking with application-aware routing, failover, and zero-trust security built for distributed enterprises.</p>
+        <a href="solutions_sdwan.html" class="learn-more">Explore SD-WAN</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128274;</div>
+        <h3>Cybersecurity</h3>
+        <p>SASE, managed firewalls, endpoint protection, and compliance-focused defense sourced from vendors that match your risk profile and budget.</p>
+        <a href="solutions_cybersecurity.html" class="learn-more">Explore security</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE'RE DIFFERENT -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">The Upside Difference</div>
+      <h2>We work for you — not the carrier.</h2>
+      <p>Most technology vendors have a built-in conflict of interest. Our model is different: we're compensated by carriers, but our loyalty is entirely to you and your outcomes.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="num">01</div>
+        <h3>Vendor-Neutral Sourcing</h3>
+        <p>We don't push any single carrier. With access to 200+ providers, we build a comparison specific to your locations, bandwidth needs, and SLA requirements — then let the data speak.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">02</div>
+        <h3>10–30% Cost Reduction</h3>
+        <p>Our technology audit regularly surfaces savings that internal IT teams miss — from overbought bandwidth and unused lines to better-priced alternatives your current provider won't volunteer.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">03</div>
+        <h3>One Point of Contact</h3>
+        <p>After deployment, we remain your single escalation point for every carrier on your account. No more hunting down account reps or sitting on hold with billing departments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS PREVIEW -->
+<section class="section section-alt2">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Our Process</div>
+      <h2>From audit to live — in four steps.</h2>
+      <p>A structured, low-friction engagement designed to minimize your time investment while maximizing your outcome.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-circle">1</div>
+        <h3>Discovery</h3>
+        <p>We audit your current stack, spend, and contract obligations to identify gaps and opportunities.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">2</div>
+        <h3>Sourcing</h3>
+        <p>We run a competitive RFP across relevant carriers and present a consolidated, unbiased comparison.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">3</div>
+        <h3>Implementation</h3>
+        <p>We manage the entire deployment — orders, scheduling, installation coordination, and cutover.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">4</div>
+        <h3>Lifecycle Support</h3>
+        <p>We handle escalations, renewals, billing issues, and proactive reviews for the life of your contracts.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="our_process.html" class="btn btn-secondary btn-lg btn-arrow">See the Full Process</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Results</div>
+      <h2>Real outcomes from real businesses.</h2>
+    </div>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-result">35%</div>
+        <div class="tag tag-green" style="margin-bottom:12px;">Cost Reduction</div>
+        <h3>Global Logistics Firm Cuts Costs</h3>
+        <p>A multi-national logistics company faced soaring MPLS costs and slow remote site performance. Upside engineered an SD-WAN solution with diverse connectivity, resulting in a seamless migration and significant monthly savings.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-result">HIPAA</div>
+        <div class="tag" style="margin-bottom:12px;">Compliance</div>
+        <h3>Medical Group Implements Compliant UCaaS</h3>
+        <p>A regional medical group needed a unified communications platform meeting strict HIPAA standards. We sourced and deployed a high-security cloud voice solution with full compliance documentation.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-result">Day 1</div>
+        <div class="tag tag-green" style="margin-bottom:12px;">Security</div>
+        <h3>FinTech Startup Launches with Enterprise Security</h3>
+        <p>A new FinTech company required low latency and rock-solid security for their trading platform. We secured dedicated fiber and implemented SASE security from day one, accelerating their launch timeline.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="case_studies.html" class="btn btn-outline btn-lg btn-arrow">Read All Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to reduce your telecom spend?</h2>
+    <p>Our technology audit is free, fast, and has no obligation. Most businesses see the results within two weeks.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">Start a Free Technology Audit</a>
+      <a href="contact.html" class="btn btn-outline btn-lg" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.25);">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="footer-placeholder"></div>
 <script src="assets/js/main.js" defer></script>
+<script>
+(function(){
+  function load(url,id){fetch(url).then(r=>r.text()).then(h=>{document.getElementById(id).innerHTML=h;}).catch(()=>{});}
+  document.addEventListener('DOMContentLoaded',function(){
+    load('assets/partials/header_menu.html','header-placeholder');
+    load('assets/partials/footer_menu.html','footer-placeholder');
+  });
+})();
+</script>
 </body>
 </html>

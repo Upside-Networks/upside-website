@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Upside Networks LLC">
+    <meta property="og:url" content="https://www.upsidenetworks.net/">
+    <meta property="og:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <meta property="og:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
+    <meta property="og:image" content="https://www.upsidenetworks.net/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Upside Networks LLC — Business Connectivity, Simplified.">
+    <meta name="twitter:description" content="Upside Networks provides networking, managed IT, cybersecurity, VoIP, and SD-WAN solutions—designed to be secure, reliable, and scalable.">
+    <meta name="twitter:image" content="https://www.upsidenetworks.net/images/og-image.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upside Networks LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/img/upside-logo.png">
+    <link rel="stylesheet" href="assets/css/style.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="section" style="text-align: center;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Comprehensive Telecom Solutions</h1>
+            <h2 style="font-size: 1.8rem; font-weight: 400; color: #007bff; margin-bottom: 60px;">Find the Right Technology Solution for Your Business</h2>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto 60px;">Upside Networks LLC acts as your dedicated agent, cutting through the complexity of the telecom market to find the perfect services at the best rates. Explore our key solution areas:</p>
+            
+            <div class="services-grid" style="margin-top: 40px;">
+                
+                <div class="service-card">
+                    <i class="fas fa-network-wired" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
+                    <h3>Business Internet & Data</h3>
+                    <p>Reliable high-speed connectivity, from Dedicated Fiber to Fixed Wireless and Coax.</p>
+                    <a href="solutions_internet.html" style="display: block; margin-top: 15px; font-weight: 700;">Explore &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-phone-volume" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
+                    <h3>Cloud Voice & UCaaS</h3>
+                    <p>Modern, scalable Unified Communications platforms integrating voice, video, and chat.</p>
+                    <a href="solutions_voip.html" style="display: block; margin-top: 15px; font-weight: 700;">Explore &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-server" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
+                    <h3>Network & SD-WAN</h3>
+                    <p>Intelligent networking for multi-location enterprises, optimizing performance and security.</p>
+                    <a href="solutions_sdwan.html" style="display: block; margin-top: 15px; font-weight: 700;">Explore &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Essential protection including SASE, managed firewalls, and data recovery solutions.</p>
+                    <a href="solutions_cybersecurity.html" style="display: block; margin-top: 15px; font-weight: 700;">Explore &rarr;</a>
+                </div>
+
+            </div>
+            
+            <section style="margin-top: 80px;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Start Saving Today</h3>
+                <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px;">Ready to optimize your services and reduce costs? Our consultation is free and comes with zero obligation.</p>
+                <a href="contact.html" style="background-color: #007bff; color: white; padding: 15px 30px; border-radius: 8px; font-size: 1.2rem; text-decoration: none; display: inline-block;">Contact an Expert &rarr;</a>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load: ' + url + ' (Status: ' + response.status + ')');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById(targetId).innerHTML = '<p style="color:red; text-align:center; padding:20px; background:#1e293b;">Component failed to load: ' + url + '</p>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('assets/partials/header_menu.html', 'header-placeholder');
+            loadComponent('assets/partials/footer_menu.html', 'footer-placeholder');
+        });
+    </script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

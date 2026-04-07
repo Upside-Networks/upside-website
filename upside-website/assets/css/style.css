@@ -1,0 +1,117 @@
+/*
+=======================================================
+GLOBAL STYLES
+=======================================================
+*/
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #ffffff; /* Pure White Background */
+    color: #333333; /* Darker Text */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { color: #1a1a1a; }
+
+a { color: #007bff; text-decoration: none; }
+a:hover { color: #0056b3; }
+
+/*
+=======================================================
+LAYOUT & COMPONENTS (Applies to all content pages)
+=======================================================
+*/
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #ffffff; 
+}
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #1a1a1a; 
+}
+.hero p {
+    font-size: 1.5rem;
+    color: #666666; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section, .container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+.section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #1a1a1a; 
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Service Card Styles */
+.service-card {
+    background: #ffffff; 
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #eeeeee; 
+    border-top: 6px solid #007bff; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+}
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1a1a1a; 
+}
+.service-card p {
+    color: #333333;
+}
+
+/* Contact Section (from Index) */
+.contact {
+    text-align: center;
+    background: #ffffff; 
+    padding: 80px 20px;
+    margin: 80px 0;
+    border-top: 1px solid #eeeeee; 
+    border-bottom: 1px solid #eeeeee;
+}
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+.contact-info {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-info p {
+    margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .section h2 { font-size: 2.5rem; }
+    .service-card { width: 100%; } 
+}

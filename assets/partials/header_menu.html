@@ -1,84 +1,138 @@
 <style>
-    /* Styles specifically for the fetched header component */
-    .dropdown-container .dropdown-content {
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #ffffff;
-        border: 1px solid #eeeeee;
-        min-width: 220px;
-        z-index: 100;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        display: none; /* Initially hidden */
-        text-align: left; /* Align text within dropdown */
-    }
-    .dropdown-container:hover .dropdown-content {
-        display: block; /* Show on hover */
-    }
-    .dropdown-container .dropdown-content li {
-        padding: 5px 20px;
-    }
-    .dropdown-container .dropdown-content a {
-        text-decoration: none;
-        color: #333333;
-        display: block;
-        white-space: nowrap; /* Prevent breaking menu links */
-    }
-    .dropdown-container .dropdown-content a:hover {
-        background-color: #f0f0f0;
-    }
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+.header-inner {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; height: 68px; gap: 40px;
+}
+.site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.logo-mark {
+  width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent), var(--blue));
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: white; font-family: var(--font-head); font-weight: 800; font-size: 0.85rem; letter-spacing: -0.03em;
+}
+.logo-text { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--text); letter-spacing: -0.02em; }
+.logo-text span { color: var(--accent-dark); }
+.main-nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+.nav-item { position: relative; }
+.nav-link {
+  display: flex; align-items: center; gap: 4px;
+  font-family: var(--font-head); font-size: 0.88rem; font-weight: 600;
+  color: var(--text-muted); padding: 8px 12px; border-radius: 6px;
+  transition: all 0.15s ease; cursor: pointer; white-space: nowrap;
+}
+.nav-link:hover { color: var(--text); background: var(--bg-alt); }
+.nav-link svg { width: 12px; height: 12px; transition: transform 0.15s; }
+.nav-item:hover .nav-link svg { transform: rotate(180deg); }
+.dropdown {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  background: white; border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow-lg); min-width: 210px; padding: 8px;
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: all 0.15s ease; z-index: 200;
+}
+.nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown a {
+  display: block; padding: 9px 12px; font-family: var(--font-head);
+  font-size: 0.85rem; font-weight: 500; color: var(--text-muted); border-radius: 6px; transition: all 0.12s;
+}
+.dropdown a:hover { background: var(--bg-alt); color: var(--text); }
+.header-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; flex-shrink: 0; }
+.header-phone {
+  font-family: var(--font-head); font-size: 0.82rem; font-weight: 600;
+  color: var(--text-muted); display: flex; align-items: center; gap: 5px; padding: 0 4px;
+}
+.header-phone:hover { color: var(--text); }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 4px; margin-left: auto; }
+.hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.2s; }
+.mobile-nav {
+  display: none; position: fixed; inset: 0; z-index: 300;
+  background: white; padding: 80px 24px 40px; flex-direction: column; gap: 0; overflow-y: auto;
+}
+.mobile-nav.open { display: flex; }
+.mobile-close {
+  position: absolute; top: 18px; right: 18px; background: var(--bg-alt);
+  border: none; cursor: pointer; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--text);
+}
+.mobile-nav a { display: block; font-family: var(--font-head); font-weight: 600; font-size: 1rem; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); }
+.mobile-nav-section { font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); padding: 20px 0 6px; }
+.mobile-nav-cta { margin-top: 28px; }
+@media (max-width: 768px) { .main-nav, .header-phone { display: none; } .hamburger { display: flex; } .header-actions { display: none; } }
 </style>
 
-<header style="background-color: #ffffff; padding: 20px 0; border-bottom: 1px solid #eeeeee;">
-    <div class="header-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-        
-        <div class="site-logo">
-            <a href="index.html"><img src="/assets/img/upside-logo.png" alt="Upside Networks LLC Logo" style="max-height: 80px; width: auto;" /></a>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="index.html">
+      <div class="logo-mark">UN</div>
+      <span class="logo-text">Upside<span>Networks</span></span>
+    </a>
+    <nav class="main-nav">
+      <div class="nav-item">
+        <span class="nav-link">Solutions <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></span>
+        <div class="dropdown">
+          <a href="solutions_internet.html">Business Internet &amp; Data</a>
+          <a href="solutions_voip.html">Cloud Voice &amp; UCaaS</a>
+          <a href="solutions_sdwan.html">Network &amp; SD-WAN</a>
+          <a href="solutions_cybersecurity.html">Cybersecurity</a>
+          <a href="solutions_hub.html" style="margin-top:4px;border-top:1px solid var(--border);padding-top:10px;color:var(--blue);">View All Solutions &rarr;</a>
         </div>
-        
-        <nav id="main-navigation" style="flex-grow: 1; text-align: right;">
-            <ul style="list-style: none; padding: 0; margin: 0; display: inline-block;">
-                <li style="display: inline-block; margin-left: 30px;"><a href="index.html" style="text-decoration: none; color: #333333; font-weight: 700;">Home</a></li>
-                
-                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
-                    <a href="solutions_hub.html" style="text-decoration: none; color: #333333; font-weight: 700;">Solutions &#9662;</a>
-                    <ul class="dropdown-content">
-                        <li><a href="solutions_internet.html">Business Internet & Data</a></li>
-                        <li><a href="solutions_voip.html">Cloud Voice & UCaaS</a></li>
-                        <li><a href="solutions_sdwan.html">Network & SD-WAN</a></li>
-                        <li><a href="solutions_cybersecurity.html">Cybersecurity</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
-                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">How We Work &#9662;</a>
-                    <ul class="dropdown-content" style="min-width: 180px;">
-                        <li><a href="our_process.html">Our Process</a></li>
-                        <li><a href="why_upside.html">Why Choose UPSIDE?</a></li>
-                    </ul>
-                </li>
-                
-                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
-                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">About Us &#9662;</a>
-                    <ul class="dropdown-content" style="min-width: 200px;">
-                        <li><a href="about_us.html">Our Story & Mission</a></li>
-                        
-                        </ul>
-                </li>
-                
-                <li class="dropdown-container" style="display: inline-block; margin-left: 30px; position: relative;">
-                    <a href="#" style="text-decoration: none; color: #333333; font-weight: 700;">Resources &#9662;</a>
-                    <ul class="dropdown-content" style="min-width: 250px;">
-                        <li><a href="case_studies.html">Case Studies / Success Stories</a></li>
-                        
-                        </ul>
-                </li>
-                
-                <li style="display: inline-block; margin-left: 30px;"><a href="contact.html" style="text-decoration: none; color: #333333; font-weight: 700;">Contact Us</a></li>
-            </ul>
-        </nav>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link">How We Work <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></span>
+        <div class="dropdown">
+          <a href="our_process.html">Our Process</a>
+          <a href="why_upside.html">Why Upside?</a>
+          <a href="carrier_partners.html">Carrier Partners</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link">Company <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></span>
+        <div class="dropdown">
+          <a href="about_us.html">About Us</a>
+          <a href="case_studies.html">Case Studies</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:2132934777">&#128222; 213-293-4777</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Free Audit &rarr;</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-close" id="mobile-close">&#10005;</button>
+  <div class="mobile-nav-section">Solutions</div>
+  <a href="solutions_internet.html">Business Internet &amp; Data</a>
+  <a href="solutions_voip.html">Cloud Voice &amp; UCaaS</a>
+  <a href="solutions_sdwan.html">Network &amp; SD-WAN</a>
+  <a href="solutions_cybersecurity.html">Cybersecurity</a>
+  <a href="solutions_hub.html">All Solutions</a>
+  <div class="mobile-nav-section">How We Work</div>
+  <a href="our_process.html">Our Process</a>
+  <a href="why_upside.html">Why Upside?</a>
+  <a href="carrier_partners.html">Carrier Partners</a>
+  <div class="mobile-nav-section">Company</div>
+  <a href="about_us.html">About Us</a>
+  <a href="case_studies.html">Case Studies</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-cta">
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;display:flex;">Start a Free Technology Audit &rarr;</a>
+  </div>
+</div>
+<script>
+(function(){
+  var header=document.getElementById('site-header'),ham=document.getElementById('hamburger'),nav=document.getElementById('mobile-nav'),close=document.getElementById('mobile-close');
+  window.addEventListener('scroll',function(){header&&header.classList.toggle('scrolled',window.scrollY>10);});
+  ham&&ham.addEventListener('click',function(){nav&&nav.classList.add('open');document.body.style.overflow='hidden';});
+  close&&close.addEventListener('click',function(){nav&&nav.classList.remove('open');document.body.style.overflow='';});
+})();
+</script>
